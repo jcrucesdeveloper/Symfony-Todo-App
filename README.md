@@ -11,7 +11,7 @@ Simple CRUD app made with Symfony PHP Framework.
 * PHP >7.0 != 7.4 (7.4 has errors with Symfony)
 * Symfony Framework
 * Composer
-* MySql database
+* MySQL database
 
 ## Usage
 1. `git clone https://github.com/jcrucesdeveloper/Symfony-Todo-App.git`
