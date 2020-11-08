@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Todo App{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+   <h2 >Todo App with Symfony</h2>
+   <table class="table mt-3">
+      <thead>
+      <tr>
+         <th scope="col">#</th>
+         <th scope="col">Activity</th>
+         <th scope="col">Description</th>
+         <th scope="col">Delete</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      {% if todos is defined%}
+         {% for todo in todos %}
+         <tr>
+            <th scope="row">{{ todo.id }}</th>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.content }}</td>
+            <td><a href="{{ path('delete',{id: todo.id}) }}" class="text-danger">Delete</a></td>
+         </tr>
+         {% endfor %}
+      {% endif %}
+      </tbody>
+   </table>
+   <a class="btn btn-primary" href="{{ path('create')}}" role="button">Add a todo</a>
+</div>
+{% endblock %}

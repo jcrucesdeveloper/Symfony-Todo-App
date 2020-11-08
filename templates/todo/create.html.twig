@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5">
+
+
+        <div class="mx-auto" style="width: 40%">
+            <h3>Add Todo</h3>
+
+            {{ form(form) }}
+            <a class="btn btn-danger" href="{{ path('index')}}" role="button">Return to menu</a>
+        </div>
+
+    </div>
+{% endblock %}
